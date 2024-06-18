@@ -20,6 +20,74 @@ body {
     max-width: 75em;
 }
 
+.burger {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    width: 24px;
+    height: 20px;
+    margin: 10px;
+}
+
+.burger span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #b1b1d2;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: #1f1f56;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: #b1b1d2;
+    font-size: 0.9333rem;
+    letter-spacing: 0.1333rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #fd8300;
+}
+
+.menu.active {
+    display: block;
+}
+
+.burger.active span:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
 li {
     list-style: none;
 }
