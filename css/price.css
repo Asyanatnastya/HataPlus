@@ -2,19 +2,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
 
 html {
-    font-size: 15px;
+    font-size: 1px; /* Загальний розмір шрифту для зручності обчислень */
+    overflow-x: hidden;
 }
 
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #24242b;
+    font-size: 16px; /* Загальний розмір шрифту */
+    line-height: 1.5;
+    overflow-x: hidden; /* Заборона горизонтального скролу */
 }
 
 .wrapper {
     margin: auto;
-    width: 80%;
+    width: 80%; /* Загальна ширина контенту */
+    max-width: 75em;
+    padding: 0 20px; /* Додатковий відступи по краях для зручності */
 }
 
 li {
@@ -28,119 +38,124 @@ sup {
 h1 {
     margin-bottom: 22px;
     font-size: 24px;
-    color: #24242b;
     font-weight: 700;
-    font-family: "Roboto Slab";
+    font-family: "Roboto Slab", sans-serif;
 }
 
 .description p {
-margin-bottom: 25px;
-max-width: 85%;
+    margin-bottom: 25px;
+    max-width: 85%;
     font-size: 14px;
-    line-height: 24px;
     color: #666666;
-    font-family: "Arial";
+    font-family: Arial, sans-serif;
 }
 
 table {
     margin-bottom: 27px;
-   overflow: hidden;
     width: 100%;
     border-collapse: collapse;
     border-radius: 3px;
+    overflow-x: auto; /* Горизонтальний скрол на малих екранах */
 }
 
-
- th p {
-    padding: 19px 21px 13px;
+th p {
+    padding: 15px 10px;
     background: #1f1f56;
     font-size: 14px;
     color: #fff;
     font-weight: 700;
     text-align: left;
-    font-family: "Roboto Slab";
+    font-family: "Roboto Slab", sans-serif;
 }
-td p{
-    padding: 15px 20px;
+
+td p {
+    padding: 12px 10px;
     font-size: 14px;
     color: #666;
-    font-family: "Arial";
+    font-family: Arial, sans-serif;
     border-bottom: 1px #cdcddd solid;
     background: #e4e4ec;
     transition: .2s;
 }
-tr:last-child td p{
+
+tr:last-child td p {
     border: none;
 }
-tr td:last-child{
+
+tr td:last-child {
     text-align: end;
 }
-tr th:last-child p{
+
+tr th:last-child p {
     text-align: end;
 }
-tbody tr:hover p{
+
+tbody tr:hover p {
     color: #fff;
     background: #fd8300;
 }
-article{
+
+article {
     border-bottom: 1px #e4e4ec solid;
+    padding-bottom: 20px;
 }
-article p{ 
+
+article p {
     margin-bottom: 8px;
-    font-size: 13px;
-    color: #666666;
-    font-family: "Arial";
-}
-h2{
-    margin-bottom: 33px;
-}
-h2 a{
     font-size: 14px;
+    color: #666666;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    margin-bottom: 22px;
+    font-size: 20px;
+    color: #1f1f56;
+    font-weight: bold;
+    font-family: "Roboto Slab", sans-serif;
+}
+
+h2 a {
     text-decoration: underline;
     color: #fd8300;
-    font-weight: bold;
-    font-family: "Arial";
 }
-h2:hover a{
+
+h2 a:hover {
     text-decoration: none;
 }
+
 .popular {
     padding: 30px 0 46px;
 }
 
 .popular p {
-    margin-bottom: 5px;
-    color: #24242b;
-    font-size: 24px;
+    margin-bottom: 10px;
+    font-size: 28px;
     font-weight: 700;
-    font-family: "Roboto Slab";
-}
-.popular h2{
-    margin-bottom: 25px;
-    color: #24242b;
-    font-size: 24px;
-    font-weight: 700;
-    font-family: "Roboto Slab";
+    font-family: "Roboto Slab", sans-serif;
 }
 
 .examples {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.examples figure {
+    width: calc(50% - 10px);
+}
+
+.examples h2 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #1f1f56;
+    font-family: Arial, sans-serif;
 }
 
 .examples a {
     text-decoration: underline;
-}
-figure{
-    width: 23%;
-}
-
-.examples h2 {
-    margin: 0 0 7px;
-    color: #1f1f56;
-    font-size: 14px;
-    font-weight: bold;
-    font-family: "Arial";
+    color: #fd8300;
 }
 
 .examples a:hover {
@@ -150,61 +165,73 @@ figure{
 .examples p {
     color: #9999a6;
     font-size: 13px;
-    font-family: "Arial";
+    font-family: Arial, sans-serif;
 }
 
 .examples img {
-    display: inline-block;
-    margin-bottom: 15px;
-    height: 151px;
-    /* width: 100%; */
+    display: block;
+    margin-bottom: 10px;
+    height: auto;
+    max-width: 100%;
 }
 
-
- @media only screen and (max-width: 320px) {
+@media (max-width: 1024px) {
     .wrapper {
-        width: 90%;
+        padding: 0 15px; /* Зменшення відступів по краях для менших екранів */
+    }
+    
+    h1 {
+        font-size: 22px; /* Зменшення розміру заголовку на менших екранах */
+    }
+    
+    .description p {
+        max-width: 100%; /* Зміна максимальної ширини для опису */
+    }
+    
+    table {
+        overflow-x: auto; /* Прокрутка таблиці на малих екранах */
+    }
+    
+    th p,
+    td p {
+        padding: 12px 8px; /* Зменшення відступів у клітинках таблиці */
+        font-size: 12px; /* Зменшення розміру тексту в таблиці */
     }
 }
 
-@media only screen and (min-width: 321px) and (max-width: 425px) {
-    .wrapper {
-        width: 85%;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px; /* Додаткове зменшення розміру заголовку на невеликих екранах */
     }
-}
-
-@media only screen and (min-width: 426px) and (max-width: 600px) {
+    
+    .description p {
+        font-size: 13px; /* Зменшення розміру тексту опису */
+    }
+    
     .examples figure {
-        width: 48%;
+        width: 100%; /* Розмір картинок в ряду на малих екранах */
+    }
+
+     th p,
+    td p {
+        padding: 10px 5px;
+        font-size: 12px;
     }
 }
 
-@media only screen and (min-width: 601px) and (max-width: 768px) {
-    .wrapper {
-        width: 90%;
+@media (max-width: 480px) {
+    th p,
+    td p {
+        padding: 8px 5px;
+        font-size: 10px;
     }
-}
 
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
-    .wrapper {
-        width: 85%;
+    table {
+        overflow-x: auto; /* Забезпечення горизонтального скролу */
+        display: block;
     }
-}
 
-@media only screen and (min-width: 1025px) and (max-width: 1440px) {
-    .wrapper {
-        width: 80%;
-    }
-}
-
-@media only screen and (min-width: 1441px) and (max-width: 1920px) {
-    .wrapper {
-        width: 75%;
-    }
-}
-
-@media only screen and (min-width: 1921px) {
-    .wrapper {
-        width: 70%;
+    th, td {
+        white-space: nowrap; /* Заборона переносу тексту в комірках */
     }
 }

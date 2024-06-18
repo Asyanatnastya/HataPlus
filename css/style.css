@@ -17,7 +17,98 @@ body {
 .wrapper {
     margin: auto;
     width: 80%;
+    max-width: 75em;
 }
+
+.burger {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    width: 24px;
+    height: 20px;
+    margin-top: 5px;
+}
+
+.line {
+    width: 100%;
+    height: 2px;
+    background-color: #b1b1d2;
+    margin: 4px 0;
+    transition: 0.3s;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    top: 60px; /* Відстань від верхнього краю до меню */
+    left: 0;
+    background-color: #1f1f56;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin-bottom: 10px;
+}
+
+.menu a {
+    color: #b1b1d2;
+    font-size: 0.9333rem;
+    letter-spacing: 0.1333rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #fd8300;
+}
+
+.menu.active {
+    display: block;
+}
+
+.burger.active .line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.burger.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.active .line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+
+.menu ul {
+    flex-direction: column;
+    row-gap: 1rem;
+    align-items: center;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu a {
+    color: #b1b1d2;
+    font-size: 0.9333rem;
+    letter-spacing: 0.1333rem;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu li:hover a {
+    color: #fd8300;
+}
+
 
 li {
     list-style: none;
@@ -123,7 +214,7 @@ a.phn:before {
     display: inline-block;
     position: absolute;
     top: 2px;
-    left: -25px;
+    /* left: -25px; */
     width: 19px;
     height: 21px;
     background: url(../img/non.png) no-repeat;
@@ -264,12 +355,15 @@ h1 {
 .mainpart {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     align-items: flex-start;
     padding-top: 36px;
 }
 
-article {
-    width: 95%;
+article,
+.popular {
+    width: 100%;
+    /* width: 70%; */
 }
 
 article p {
@@ -296,6 +390,7 @@ article a:hover {
 .popular {
     padding: 30px 0 46px;
     border-top: 1px solid #e4e4ec;
+    order: 3;
 }
 
 .popular p {
@@ -316,6 +411,7 @@ article a:hover {
 .examples {
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
 }
 
 .examples a {
@@ -344,12 +440,14 @@ article a:hover {
 .examples img {
     display: inline-block;
     margin-bottom: 15px;
-    height: 151px;
+    height: 200px;
 }
 
 aside {
     overflow: hidden;
-    width: 23%;
+    /* width: 220px; */
+    width: 100%;
+    order: 2;
     border-radius: 3px;
 }
 
