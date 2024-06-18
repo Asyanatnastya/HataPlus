@@ -1,3 +1,11 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+
 sup {
     font-size: 0.6rem;
 }
@@ -10,7 +18,7 @@ h1 {
     font-family: "Roboto Slab";
 }
 
-.column>p {
+.column > p {
     margin-bottom: 22px;
     font-size: 14px;
     color: #24242b;
@@ -56,26 +64,21 @@ h1 {
 }
 
 .contacts {
-    display: flex;
-    justify-content: space-between;
-    align-items: start;
     padding-bottom: 33px;
     margin-bottom: 14px;
     border-bottom: 1px #e4e4ec solid;
 }
 
-
-
 .flex {
-    display: flex;
-    gap: 10px;
-    justify-content: space-between;
+    display: block;
 }
-.map,
-form{
-    width: 48%;
 
+.map,
+form {
+    width: 100%;
+    margin-bottom: 20px;
 }
+
 .map {
     overflow: hidden;
 }
@@ -85,57 +88,38 @@ iframe {
     width: 100%;
     height: 300px;
     border: none;
-
 }
 
-form  p {
+form p {
     margin-bottom: 10px;
-
 }
 
 label {
-    display: inline-block;
-    flex-grow: 1;
-    
+    display: block;
+    margin-bottom: 8px;
 }
 
-
-
-label input:not([type=checkbox]) {
-    display: inline-block;
+label input:not([type=checkbox]),
+label textarea {
     width: 100%;
     padding: 10px;
     background-color: #fff;
     border: 1px solid #ccc;
+    font-size: 14px;
 }
 
 input::placeholder,
 textarea::placeholder {
-    font-size: 13px;
-    line-height: 21px;
+    font-size: 12px;
+    line-height: 18px;
     color: #9999a6;
     font-style: italic;
     font-family: "Arial";
 }
 
-label textarea {
-    width: 100%;
-    outline: none;
-    border-radius: 3px;
-    padding: 10px;
-    background-color: #ffffff;
-    border: 1px solid #cccccc;
-}
-
-.submit-line {
-    align-items: center;
-}
-
-
-
-    [type=submit]  {
+[type=submit] {
     display: inline-block;
-    padding: 12px 12px;
+    padding: 12px 20px;
     color: black;
     font-size: 14px;
     font-weight: bold;
@@ -144,13 +128,110 @@ label textarea {
     border: 2px solid #fd8300;
     border-radius: 31px;
     transition: .3s;
+    background-color: #fd8300;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
- .submit-line input[type=submit] {
-    background-color: #fd8300;
- }
-
- .submit-line input[type=submit]:hover {
+[type=submit]:hover {
     background-color: #fff;
- }
+    color: #fd8300;
+}
+
+.footer-line{
+    background-color: #ededf5;
+}
+
+.coperate {
+    background-color: #dcdce6;
+}
+
+@media  (max-width: 425px) {
+    .wrapper {
+        display: block; /* Зміна на блочний вигляд для мобільних */
+    }
+
+    h1 {
+        margin-bottom: 18px; /* Зменшення відступу між заголовками на мобільних */
+        font-size: 20px; /* Зменшення розміру шрифту заголовків на мобільних */
+    }
+
+    .column > p {
+        margin-bottom: 18px; /* Зменшення відступу між абзацами на мобільних */
+        font-size: 12px; /* Зменшення розміру шрифту абзаців на мобільних */
+    }
+
+    .adress {
+        font-size: 12px; /* Зменшення розміру шрифту адреси на мобільних */
+        line-height: 18px; /* Зменшення міжрядкового інтервалу адреси на мобільних */
+        margin-bottom: 12px; /* Зменшення відступу між елементами на мобільних */
+    }
+
+    .tel {
+        font-size: 16px; /* Зменшення розміру шрифту телефону на мобільних */
+        line-height: 22px; /* Зменшення міжрядкового інтервалу телефону на мобільних */
+        margin-bottom: 10px; /* Зменшення відступу між елементами на мобільних */
+    }
+
+    .manager {
+        margin-bottom: 12px; /* Зменшення відступу між менеджерами на мобільних */
+    }
+
+    .column li p {
+        font-size: 12px; /* Зменшення розміру шрифту списку на мобільних */
+        line-height: 18px; /* Зменшення міжрядкового інтервалу списку на мобільних */
+    }
+
+    .column a {
+        font-size: 16px; /* Зменшення розміру шрифту посилань на мобільних */
+        line-height: 22px; /* Зменшення міжрядкового інтервалу посилань на мобільних */
+    }
+
+    .contacts {
+        padding-bottom: 28px; /* Зменшення відступу внизу контактів на мобільних */
+        margin-bottom: 10px; /* Зменшення відступу між контактами на мобільних */
+    }
+
+    .map,
+    form {
+        width: 100%; /* Займати всю ширину контейнера на мобільних */
+        margin-bottom: 16px; /* Зменшення відступу між картами і формами на мобільних */
+    }
+
+    iframe {
+        margin-top: -60px; /* Зміна відступу вгору для карти на мобільних */
+        height: 250px; /* Зменшення висоти карти на мобільних */
+    }
+
+    form p {
+        margin-bottom: 8px; /* Зменшення відступу між елементами форми на мобільних */
+    }
+
+    label {
+        margin-bottom: 6px; /* Зменшення відступу між елементами на мобільних */
+    }
+
+    label input:not([type=checkbox]),
+    label textarea {
+        padding: 8px; /* Зменшення відступів від країв для введення на мобільних */
+        font-size: 12px; /* Зменшення розміру шрифту для введення на мобільних */
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+        font-size: 10px; /* Зменшення розміру підказки для введення на мобільних */
+        line-height: 16px; /* Зменшення міжрядкового інтервалу підказки на мобільних */
+    }
+
+    [type=submit] {
+        padding: 10px 16px; /* Зменшення розміру поля введення для кнопки на мобільних */
+        margin-bottom: 16px; /* Зменшення відступу між кнопкою і нижнім відступом форми на мобільних */
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
 

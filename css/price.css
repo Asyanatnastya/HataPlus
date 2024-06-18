@@ -6,7 +6,7 @@
 }
 
 html {
-    font-size: 1px; /* Загальний розмір шрифту для зручності обчислень */
+    font-size: 1px; /* Загальний розмір шрифту для  обчислень */
     overflow-x: hidden;
 }
 
@@ -24,7 +24,7 @@ body {
     margin: auto;
     width: 80%; /* Загальна ширина контенту */
     max-width: 75em;
-    padding: 0 20px; /* Додатковий відступи по краях для зручності */
+    padding: 0 20px; /* Додатковий відступи по краях  */
 }
 
 li {
@@ -174,6 +174,16 @@ h2 a:hover {
     height: auto;
     max-width: 100%;
 }
+
+.footer-line{
+    background-color: #ededf5;
+}
+
+.coperate {
+    background-color: #dcdce6;
+}
+
+
 
 @media (max-width: 1024px) {
     .wrapper {

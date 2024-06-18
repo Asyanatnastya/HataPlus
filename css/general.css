@@ -292,7 +292,6 @@ body {
 
 .navigation .flex {
     display: flex;
-    
     align-items: center;
 }
 
@@ -344,11 +343,11 @@ body {
     border-radius: 5px;
 }
 
+
 @media (min-width: 426px) {
     .navigation {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
         padding: 20px;
     }
 
@@ -386,77 +385,6 @@ body {
     }
 }
 
-@media (min-width: 321px) {
-    .navigation {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 20px;
-    }
-
-    .bottommenu {
-        margin-bottom: 0;
-    }
-
-    .bottommenu ul {
-        display: flex;
-    }
-
-    .bottommenu ul li {
-        margin: 0 10px;
-    }
-
-    .phone,
-    .email {
-        margin-bottom: 0;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        /* align-items: flex-start; */
-    }
-
-    .phone a,
-    .email a {
-        display: inline;
-        padding: 0;
-        background-color: transparent;
-    }
-
-    .phone p,
-    .email p {
-        margin: 0;
-    }
-
-    .phone a,
-    .email a {
-        display: inline;
-        padding: 0;
-        background-color: transparent;
-    }
-
-    .phone p,
-    .email p {
-        margin: 0;
-    }
-
-    a.phn:before {
-        content: "";
-        display: inline-block;
-        /* position: relative; */
-        top: 0.1333rem;
-        /* 2px */
-        /* left: -0.7333rem;  */
-        width: 1.1333rem;
-        /* 17px */
-        height: 1.1333rem;
-        /* 17px */
-        background: url(../img/phn.png) no-repeat;
-        background-position: -0.1333rem -0.1333rem;
-        /* -2px -2px */
-    }
-
-
-}
 
 @media (min-width: 426px) {
     .navigation {
@@ -517,6 +445,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
 
     .menu ul {
         flex-direction: column;
@@ -688,3 +617,76 @@ body {
         overflow-x: auto;
     }
 }
+
+@media (min-width: 321px) {
+    .navigation {
+        display: flex;
+        justify-content: space-between;
+        /* align-items: flex-start; */
+        padding: 20px;
+    }
+
+    .bottommenu {
+        margin-bottom: 0;
+    }
+
+    .bottommenu ul {
+        display: flex;
+    }
+
+    .bottommenu ul li {
+        margin: 0 10px;
+    }
+
+    .phone,
+    .email {
+        margin-bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* align-items: flex-start; */
+    }
+
+    .phone a,
+    .email a {
+        display: inline;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .phone p,
+    .email p {
+        margin: 0;
+    }
+
+    .phone a,
+    .email a {
+        display: inline;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .phone p,
+    .email p {
+        margin: 0;
+    }
+
+    a.phn:before {
+        content: "";
+        display: inline-block;
+        /* position: relative; */
+        top: 0.1333rem;
+        /* 2px */
+        /* left: -0.7333rem;  */
+        width: 1.1333rem;
+        /* 17px */
+        height: 1.1333rem;
+        /* 17px */
+        background: url(../img/phn.png) no-repeat;
+        background-position: -0.1333rem -0.1333rem;
+        /* -2px -2px */
+    }
+
+
+}
+
